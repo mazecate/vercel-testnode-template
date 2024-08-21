@@ -7,7 +7,7 @@
         "ejs": "*",
         "express": "*"
     },
-    "engine": "node >= 12.0.0",
+    "engine": "node >= 20.0.0",
     "scripts": {
         "start": "node server"
     }
