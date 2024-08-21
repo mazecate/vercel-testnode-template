@@ -19,6 +19,7 @@ const greetingMsg = (name = null, includeTime = false) => {
   app.get('/greetings', (req, res) => {
     res.set('Content-Type', 'text/html');
     tmplName = __dirname+ '/views/welcome';
+      console.log(tmpleName);
     res.status(200).render(tmplName, {msg: greetingMsg(req.query.name, false)});
   });
   
