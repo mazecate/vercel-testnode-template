@@ -18,7 +18,8 @@ const greetingMsg = (name = null, includeTime = false) => {
   
   app.get('/greetings', (req, res) => {
     res.set('Content-Type', 'text/html');
-    res.status(200).render('welcome', {msg: greetingMsg(req.query.name, false)});
+    tmplName = __dirname+ '/views/welcome';
+    res.status(200).render(tmplName, {msg: greetingMsg(req.query.name, false)});
   });
   
   app.get('/greetings/sayHello', (req, res) => {
@@ -27,7 +28,8 @@ const greetingMsg = (name = null, includeTime = false) => {
   
   app.get('/greetings/sayHelloWithTime', (req, res) => {
     res.set('Content-Type', 'text/html');
-    res.status(200).render('welcome', {msg: greetingMsg(req.query.name, true)});
+      tmplName = __dirname+ '/views/welcome';
+    res.status(200).render(tmplName, {msg: greetingMsg(req.query.name, true)});
   });
   
   app.get('/*', (req, res) => {  // default route for anything else
