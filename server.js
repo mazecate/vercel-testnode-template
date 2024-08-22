@@ -18,7 +18,7 @@ const greetingMsg = (name = null, includeTime = false) => {
   
   app.get('/greetings', (req, res) => {
     res.set('Content-Type', 'text/html');
-    tmplName = 'views/welcome';
+    tmplName = 'welcome';
       console.log(tmplName);
       console.log("L23: ", tmplName);
     res.status(200).render(tmplName, {msg: greetingMsg(req.query.name, false)});
@@ -30,7 +30,7 @@ const greetingMsg = (name = null, includeTime = false) => {
   
   app.get('/greetings/sayHelloWithTime', (req, res) => {
     res.set('Content-Type', 'text/html');
-      tmplName = 'views/welcome';
+      tmplName = 'welcome';
       console.log("L33: ", tmplName);
     res.status(200).render(tmplName, {msg: greetingMsg(req.query.name, true)});
   });
