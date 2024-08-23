@@ -9,7 +9,7 @@
     },
     "engine": "node >= 12.0.0",
     "scripts": {
-        "start": "node index",
-        "startse": "node server"
+        "start11": "node index",
+        "start": "node server"
     }
 }
